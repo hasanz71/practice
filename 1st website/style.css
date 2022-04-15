@@ -1,0 +1,13 @@
+.messi {
+  border: 5px solid red;
+  border-radius: 49px;
+  margin: 10px;
+  width: 30%;
+  display: inline-block;
+}
+h2 {
+  text-align: center;
+}
+p {
+  text-align: justify;
+}

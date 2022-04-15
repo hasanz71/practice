@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <style>
+      h1 {
+        color: aqua;
+      }
+      h1::before {
+        content: "Hello ";
+      }
+      input:focus {
+        font-weight: 200;
+        font-size: 25px;
+        color: aqua;
+      }
+
+      li:nth-child(2n + 1) {
+        width: 16.5%;
+      }
+      li:nth-child(2n) {
+        width: 16.5%;
+      }
+      a:visited {
+        color: blue;
+      }
+      body {
+        counter-reset: player;
+      }
+
+      li::before {
+        counter-increment: player; /* Increment the value of section counter by 1 */
+        content: "Player " counter(player) ": "; /* Display counter value in default style (decimal) */
+      }
+      /* .special-effect:hover {
+        color: blueviolet;
+        font-size: 40px;
+      } */
+    </style>
+  </head>
+  <body>
+    <h1 class="special-effect">We'll talk about Pseudo Class!!</h1>
+    <input name="email" type="text" />
+    <button>Click me!!</button>
+    <br />
+    <input name="username" type="text" />
+    <button>Click me!!</button>
+    <ul class="players">
+      <li>Stegan</li>
+      <li>Alves</li>
+      <li>Araujo</li>
+      <li>Garcia</li>
+      <li>Alba</li>
+      <li>Busi</li>
+      <li>De Jong</li>
+      <li>Pedri</li>
+      <li>Dembele</li>
+      <li>Auba</li>
+      <li>Feran</li>
+    </ul>
+    <a href="https://www.facebook.com/VejaaL7">My facebook page</a>
+  </body>
+</html>
