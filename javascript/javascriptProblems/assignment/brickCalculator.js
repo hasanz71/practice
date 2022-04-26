@@ -10,16 +10,23 @@ function brickCalculator(buildingStorey) {
   let brick = 1000; //1 feet = 1000 bricks
   let totalBricks = 0;
   if (buildingStorey <= 0) {
-    console.log("be rich first, idiot");
+    console.log("Be rich first, Idiot");
   } else if (buildingStorey <= 10) {
     totalBricks = 15 * buildingStorey * brick; // 15 ft. in first ten storey
-  } else if (buildingStorey > 10 && buildingStorey <= 20) {
-    totalBricks = 15 * 10 * brick + 12 * (buildingStorey - 10) * brick; // 12 ft. in 10 to 20 storey
+  } else if (buildingStorey <= 20) {
+    let firstPart = 15 * 10 * brick;
+    let remaining = buildingStorey - 10;
+    let secondPart = 12 * remaining * brick; // 12 ft. in 10 to 20 storey
+    totalBricks = firstPart + secondPart;
   } else if (buildingStorey > 20) {
-    totalBricks =
-      15 * 10 * brick + 12 * 10 * brick + 10 * (buildingStorey - 20) * brick; // 10 ft. in 20+ storey
+    let firstPart = 15 * 10 * brick;
+    let secondPart = 12 * 10 * brick;
+    let remaining = buildingStorey - 20;
+    let thirdPart = 10 * remaining * brick; // 10 ft. in 20+ storey
+
+    totalBricks = firstPart + secondPart + thirdPart;
   }
   return totalBricks;
 }
-let result = brickCalculator(23);
+let result = brickCalculator(25);
 console.log(result);
